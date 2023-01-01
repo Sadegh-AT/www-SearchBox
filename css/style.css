@@ -1,0 +1,121 @@
+@keyframes vibrate-1 {
+    0% {
+        transform: translate(0)
+    }
+
+    20% {
+        transform: translate(-2px, 2px)
+    }
+
+    40% {
+        transform: translate(-2px, -2px)
+    }
+
+    60% {
+        transform: translate(2px, 2px)
+    }
+
+    80% {
+        transform: translate(2px, -2px)
+    }
+
+    100% {
+        transform: translate(0)
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #393E46;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: "outfit";
+    overflow: hidden;
+
+
+
+
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.search input {
+    max-width: 10px;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 20px;
+    box-sizing: border-box;
+    /* position: absolute; */
+    width: 180px;
+    background-color: #345B63;
+    /* display: none; */
+    transition: all 0.4s ease-in-out;
+    color: #D4ECDD;
+    font-family: "outfit";
+    font-weight: 500;
+}
+
+.search input.active {
+    transition: all 0.4s ease-in-out;
+    margin: 50px;
+    max-width: 180px;
+    height: 30px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    padding: 20px;
+    box-sizing: border-box;
+
+    width: 180px;
+    background-color: #345B63;
+}
+
+.search input::placeholder {
+    color: #d4ecdd83;
+    font-family: "outfit";
+}
+
+
+.search button {
+    position: absolute;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #D4ECDD;
+    transition: all 0.3s ease-in-out;
+}
+
+.search button:hover {
+    transform: scale(1.12);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.185);
+
+}
+
+.search button:hover .icon {
+    transform: rotate(360deg);
+}
+
+.search button .icon {
+    transition: all 0.5s ease-in-out;
+    color: #345B63;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+}
